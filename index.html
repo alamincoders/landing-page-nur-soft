@@ -248,150 +248,157 @@
         </section>
 
         <!-- =============================== table part started =============================== -->
-        <section class="space-y-9 overflow-hidden">
+        <section class="space-y-9">
           <div class="mt-6">
             <h2 class="text-[18px] font-bold leading-[28px] mb-2">EQUILIBRIUM DISTANCE R0 IN [Å]</h2>
-            <!-- table -->
-            <table class="w-[960px] overflow-x-scroll">
-              <thead class="bg-[#E9ECEF]">
-                <tr class="text-left text-[18px] text-[#495057]">
-                  <th></th>
-                  <th class="py-2 font-medium md:w-[200px]">r0</th>
-                  <th class="py-2 font-medium md:w-[200px]">r0 (STO-3G)</th>
-                  <th class="py-2 font-medium">r0 (6-31G red.)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="!pl-5">Reference value</td>
-                  <td>0.741</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="!pl-5">Quantum algorithm (VQE)</td>
-                  <td></td>
-                  <td>0.749</td>
-                  <td>0.785</td>
-                </tr>
-                <tr>
-                  <td class="!pl-5">Hartree Fock</td>
-                  <td></td>
-                  <td>0.712</td>
-                  <td>0.73</td>
-                </tr>
-                <tr>
-                  <td class="!pl-5">Full CI (Exact)</td>
-                  <td></td>
-                  <td>0.735</td>
-                  <td>0.746</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <button class="py-3 px-6 bg-[#94B3E6] text-white rounded-[100px]">Derive molecule properties</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <!-- table container with horizontal scroll -->
+            <div class="overflow-x-scroll md:overflow-hidden">
+              <table class="min-w-[960px]">
+                <thead class="bg-[#E9ECEF]">
+                  <tr class="text-left text-[18px] text-[#495057]">
+                    <th></th>
+                    <th class="py-2 font-medium md:w-[200px]">r0</th>
+                    <th class="py-2 font-medium md:w-[200px]">r0 (STO-3G)</th>
+                    <th class="py-2 font-medium">r0 (6-31G red.)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="!pl-5">Reference value</td>
+                    <td>0.741</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="!pl-5">Quantum algorithm (VQE)</td>
+                    <td></td>
+                    <td>0.749</td>
+                    <td>0.785</td>
+                  </tr>
+                  <tr>
+                    <td class="!pl-5">Hartree Fock</td>
+                    <td></td>
+                    <td>0.712</td>
+                    <td>0.73</td>
+                  </tr>
+                  <tr>
+                    <td class="!pl-5">Full CI (Exact)</td>
+                    <td></td>
+                    <td>0.735</td>
+                    <td>0.746</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <button class="py-3 px-6 bg-[#94B3E6] text-white rounded-[100px]">Derive molecule properties</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
+
           <div class="mt-6">
             <h2 class="text-[18px] font-bold leading-[28px] mb-2">Dissociation energy ∆E in [E]</h2>
             <!-- table -->
-            <table class="w-[960px] overflow-x-scroll">
-              <thead class="bg-[#E9ECEF]">
-                <tr class="text-left text-[18px] text-[#495057]">
-                  <th></th>
-                  <th class="py-2 font-medium md:w-[200px]">∆E</th>
-                  <th class="py-2 font-medium md:w-[200px]">∆E (STO-3G)</th>
-                  <th class="py-2 font-medium">∆E (6-31G red.)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="!pl-5">Reference value</td>
-                  <td>0.174</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="!pl-5">Quantum algorithm (VQE)</td>
-                  <td></td>
-                  <td>0.224</td>
-                  <td>0.153</td>
-                </tr>
-                <tr>
-                  <td class="!pl-5">Hartree Fock</td>
-                  <td></td>
-                  <td>0.224</td>
-                  <td>0.153</td>
-                </tr>
-                <tr>
-                  <td class="!pl-5">Full CI (Exact)</td>
-                  <td></td>
-                  <td>0.224</td>
-                  <td>0.153</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <button class="py-3 px-6 bg-[#94B3E6] text-white rounded-[100px]">Derive molecule properties</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="overflow-x-scroll md:overflow-hidden">
+              <table class="min-w-[960px]">
+                <thead class="bg-[#E9ECEF]">
+                  <tr class="text-left text-[18px] text-[#495057]">
+                    <th></th>
+                    <th class="py-2 font-medium md:w-[200px]">∆E</th>
+                    <th class="py-2 font-medium md:w-[200px]">∆E (STO-3G)</th>
+                    <th class="py-2 font-medium">∆E (6-31G red.)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="!pl-5">Reference value</td>
+                    <td>0.174</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="!pl-5">Quantum algorithm (VQE)</td>
+                    <td></td>
+                    <td>0.224</td>
+                    <td>0.153</td>
+                  </tr>
+                  <tr>
+                    <td class="!pl-5">Hartree Fock</td>
+                    <td></td>
+                    <td>0.224</td>
+                    <td>0.153</td>
+                  </tr>
+                  <tr>
+                    <td class="!pl-5">Full CI (Exact)</td>
+                    <td></td>
+                    <td>0.224</td>
+                    <td>0.153</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <button class="py-3 px-6 bg-[#94B3E6] text-white rounded-[100px]">Derive molecule properties</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           <div class="mt-6">
             <h2 class="text-[18px] font-bold leading-[28px] mb-2">Oscillation frequency w in [1/cm]</h2>
             <!-- table -->
-            <table class="w-[960px] overflow-x-scroll">
-              <thead class="bg-[#E9ECEF]">
-                <tr class="text-left text-[18px] text-[#495057]">
-                  <th></th>
-                  <th class="py-2 font-medium md:w-[200px]">w</th>
-                  <th class="py-2 font-medium md:w-[200px]">w (STO-3G)</th>
-                  <th class="py-2 font-medium">w (6-31G red.)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="!pl-5">Reference value</td>
-                  <td>4404</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td class="!pl-5">Quantum algorithm (VQE)</td>
-                  <td></td>
-                  <td>5197</td>
-                  <td>4308</td>
-                </tr>
-                <tr>
-                  <td class="!pl-5">Hartree Fock</td>
-                  <td></td>
-                  <td>5481</td>
-                  <td>4646</td>
-                </tr>
-                <tr>
-                  <td class="!pl-5">Full CI (Exact)</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>
-                    <button class="py-3 px-6 bg-[#94B3E6] text-white rounded-[100px]">Derive molecule properties</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="overflow-x-scroll md:overflow-hidden">
+              <table class="min-w-[960px]">
+                <thead class="bg-[#E9ECEF]">
+                  <tr class="text-left text-[18px] text-[#495057]">
+                    <th></th>
+                    <th class="py-2 font-medium md:w-[200px]">w</th>
+                    <th class="py-2 font-medium md:w-[200px]">w (STO-3G)</th>
+                    <th class="py-2 font-medium">w (6-31G red.)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="!pl-5">Reference value</td>
+                    <td>4404</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td class="!pl-5">Quantum algorithm (VQE)</td>
+                    <td></td>
+                    <td>5197</td>
+                    <td>4308</td>
+                  </tr>
+                  <tr>
+                    <td class="!pl-5">Hartree Fock</td>
+                    <td></td>
+                    <td>5481</td>
+                    <td>4646</td>
+                  </tr>
+                  <tr>
+                    <td class="!pl-5">Full CI (Exact)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <button class="py-3 px-6 bg-[#94B3E6] text-white rounded-[100px]">Derive molecule properties</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
         <section></section>
