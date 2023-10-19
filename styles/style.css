@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container_fluid {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .container_fluid {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
+li {
+  list-style: none;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+li:hover {
+  color: #3a74d1;
+}
