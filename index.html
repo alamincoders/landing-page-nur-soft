@@ -92,25 +92,25 @@
       <!-- ========================= Tab section ==================== -->
       <section class="pt-16 container_fluid lg:w-[960px] mx-auto">
         <section class="flex flex-wrap justify-between items-center text-[18px] mb-9">
-          <button class="p-[6px]" onclick="showTab('whyQuantum')">Why Quantum</button>
-          <button class="p-[6px]" onclick="showTab('background')">Background</button>
-          <button class="p-[6px]" onclick="showTab('calculations')">Calculations</button>
-          <button class="p-[6px]" onclick="showTab('codeBlocks')">Code Blocks</button>
+          <button class="p-[6px] active-button" onclick="showTab('whyQuantum')">Why Quantum</button>
+          <button class="p-[6px] active-button" onclick="showTab('background')">Background</button>
+          <button class="p-[6px] active-button" onclick="showTab('calculations')">Calculations</button>
+          <button class="p-[6px] active-button" onclick="showTab('codeBlocks')">Code Blocks</button>
         </section>
 
         <!-- ========================= Content Sections =================== -->
-        <section id="whyQuantum" class="tab-content">
+        <section id="whyQuantum" class="tab-content p-6">
           <!-- Content for the "Why Quantum" tab -->
-          <h1>Why Quantum Content</h1>
+          <h3 class="text-2xl font-semibold">Why Quantum Content</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus a tempore numquam provident suscipit iste porro facilis nihil expedita
             dicta saepe tempora assumenda aliquam, mollitia quam temporibus perspiciatis quis debitis.
           </p>
         </section>
 
-        <section id="background" class="tab-content">
+        <section id="background" class="tab-content p-6">
           <!-- Content for the "Background" tab -->
-          <h3>Background Content</h3>
+          <h3 class="text-2xl font-semibold">Background Content</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus a tempore numquam provident suscipit iste porro facilis nihil expedita
             dicta saepe tempora assumenda aliquam, mollitia quam temporibus perspiciatis quis debitis.
@@ -274,9 +274,9 @@
           </section>
         </section>
 
-        <section id="codeBlocks" class="tab-content">
+        <section id="codeBlocks" class="tab-content p-6">
           <!-- Content for the "Code Blocks" tab -->
-          <h3>Code Blocks Content</h3>
+          <h3 class="text-2xl font-semibold">Code Blocks Content</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus a tempore numquam provident suscipit iste porro facilis nihil expedita
             dicta saepe tempora assumenda aliquam, mollitia quam temporibus perspiciatis quis debitis.
@@ -504,6 +504,13 @@
           selectedTab.style.display = "block";
         }
 
+        // Remove the "active" class from all buttons
+        const tabButtons = document.getElementsByClassName("active-button");
+        for (let i = 0; i < tabButtons.length; i++) {
+          tabButtons[i].classList.remove("active");
+        }
+
+        // Add the "active" class to the clicked button
         const activeButton = document.querySelector(`[onclick="showTab('${tabId}')"]`);
         if (activeButton) {
           activeButton.classList.add("active");
