@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/style.css" />
     <!-- ======================= tailwind configuration ======================= -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script>
       tailwind.config = {
         theme: {
@@ -90,162 +92,198 @@
       <!-- ========================= Tab section ==================== -->
       <section class="pt-16 container_fluid lg:w-[960px] mx-auto">
         <section class="flex flex-wrap justify-between items-center text-[18px] mb-9">
-          <button class="p-[6px]">Why Quantum</button>
-          <button class="p-[6px]">Background</button>
-          <button class="p-[6px] bg-[#F8FAFF] rounded-[8px] font-semibold text-[#1E437E]">Calculations</button>
-          <button class="p-[6px]">Code Blocks</button>
+          <button class="p-[6px]" onclick="showTab('whyQuantum')">Why Quantum</button>
+          <button class="p-[6px]" onclick="showTab('background')">Background</button>
+          <button class="p-[6px]" onclick="showTab('calculations')">Calculations</button>
+          <button class="p-[6px]" onclick="showTab('codeBlocks')">Code Blocks</button>
         </section>
 
-        <!-- ========================= Molecule Selection & Graph section =============== -->
-        <h3 class="uppercase text-[18px] font-bold mb-5">Molecule Selection</h3>
-        <section class="grid grid-cols-1 lg:grid-cols-3 gap-[80px]">
-          <div class="space-y-5">
-            <!-- select options -->
-            <div>
-              <div class="flex justify-between items-center mb-3">
-                <h4 class="text-[18px] font-medium">First Atom</h4>
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="9" fill="#ADB5BD" />
-                    <rect x="7.5" y="6.99976" width="2.99999" height="7.99999" rx="1.5" fill="white" />
-                    <rect x="7.5" y="3" width="2.99999" height="2.99999" rx="1.5" fill="white" />
-                  </svg>
-                </button>
-              </div>
-              <!-- =================== select options =============== -->
-              <div>
-                <select name="H" id="H" class="border shadow-sm rounded-[8px] py-[10px] px-4 w-full">
-                  <option value="H">H</option>
-                  <option value="H">H</option>
-                  <option value="H">H</option>
-                </select>
-              </div>
-            </div>
+        <!-- ========================= Content Sections =================== -->
+        <section id="whyQuantum" class="tab-content">
+          <!-- Content for the "Why Quantum" tab -->
+          <h1>Why Quantum Content</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus a tempore numquam provident suscipit iste porro facilis nihil expedita
+            dicta saepe tempora assumenda aliquam, mollitia quam temporibus perspiciatis quis debitis.
+          </p>
+        </section>
 
-            <!-- ============ second options -->
-            <div>
-              <div class="flex justify-between items-center mb-3">
-                <h4 class="text-[18px] font-medium">Second Atom</h4>
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="9" fill="#ADB5BD" />
-                    <rect x="7.5" y="6.99976" width="2.99999" height="7.99999" rx="1.5" fill="white" />
-                    <rect x="7.5" y="3" width="2.99999" height="2.99999" rx="1.5" fill="white" />
-                  </svg>
-                </button>
-              </div>
-              <!-- =================== select options =============== -->
-              <div>
-                <select name="H" id="H" class="border shadow-sm rounded-[8px] py-[10px] px-4 w-full">
-                  <option value="H">H</option>
-                  <option value="H">H</option>
-                  <option value="H">H</option>
-                </select>
-              </div>
-            </div>
+        <section id="background" class="tab-content">
+          <!-- Content for the "Background" tab -->
+          <h3>Background Content</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus a tempore numquam provident suscipit iste porro facilis nihil expedita
+            dicta saepe tempora assumenda aliquam, mollitia quam temporibus perspiciatis quis debitis.
+          </p>
+        </section>
 
-            <!-- ============ Interatomic distances [Å] options -->
-            <div>
-              <div class="flex justify-between items-center mb-3">
-                <h4 class="text-[18px] font-medium">Interatomic distances [Å]</h4>
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="9" fill="#ADB5BD" />
-                    <rect x="7.5" y="6.99976" width="2.99999" height="7.99999" rx="1.5" fill="white" />
-                    <rect x="7.5" y="3" width="2.99999" height="2.99999" rx="1.5" fill="white" />
-                  </svg>
-                </button>
-              </div>
-              <!-- =================== slider options =============== -->
-              <div>
-                <div class="flex items-center justify-between space-x-2">
-                  <label for="price-range" class="block text-sm font-medium text-gray-900 dark:text-white font-medium">0.35</label>
-                  <input
-                    id="price-range"
-                    type="range"
-                    min="0"
-                    max="100"
-                    value="50"
-                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 range-slider"
-                  />
-                  <label for="price-range" class="block text-sm font-medium text-gray-900 dark:text-white font-medium">2.00</label>
+        <section id="calculations" class="tab-content">
+          <!-- Content for the "Calculations" tab -->
+          <section>
+            <h3 class="uppercase text-[18px] font-bold mb-5">Molecule Selection</h3>
+            <section class="grid grid-cols-1 lg:grid-cols-3 gap-[80px]">
+              <div class="space-y-5">
+                <!-- select options -->
+                <div>
+                  <div class="flex justify-between items-center mb-3">
+                    <h4 class="text-[18px] font-medium">First Atom</h4>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <circle cx="9" cy="9" r="9" fill="#ADB5BD" />
+                        <rect x="7.5" y="6.99976" width="2.99999" height="7.99999" rx="1.5" fill="white" />
+                        <rect x="7.5" y="3" width="2.99999" height="2.99999" rx="1.5" fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- =================== select options =============== -->
+                  <div>
+                    <select name="H" id="H" class="border shadow-sm rounded-[8px] py-[10px] px-4 w-full">
+                      <option value="H">H</option>
+                      <option value="H">H</option>
+                      <option value="H">H</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- ============ second options -->
+                <div>
+                  <div class="flex justify-between items-center mb-3">
+                    <h4 class="text-[18px] font-medium">Second Atom</h4>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <circle cx="9" cy="9" r="9" fill="#ADB5BD" />
+                        <rect x="7.5" y="6.99976" width="2.99999" height="7.99999" rx="1.5" fill="white" />
+                        <rect x="7.5" y="3" width="2.99999" height="2.99999" rx="1.5" fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- =================== select options =============== -->
+                  <div>
+                    <select name="H" id="H" class="border shadow-sm rounded-[8px] py-[10px] px-4 w-full">
+                      <option value="H">H</option>
+                      <option value="H">H</option>
+                      <option value="H">H</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- ============ Interatomic distances [Å] options -->
+                <div>
+                  <div class="flex justify-between items-center mb-3">
+                    <h4 class="text-[18px] font-medium">Interatomic distances [Å]</h4>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <circle cx="9" cy="9" r="9" fill="#ADB5BD" />
+                        <rect x="7.5" y="6.99976" width="2.99999" height="7.99999" rx="1.5" fill="white" />
+                        <rect x="7.5" y="3" width="2.99999" height="2.99999" rx="1.5" fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- =================== slider options =============== -->
+                  <div>
+                    <div class="flex items-center justify-between space-x-2">
+                      <label for="price-range" class="block text-sm font-medium text-gray-900 dark:text-white font-medium">0.35</label>
+                      <input
+                        id="price-range"
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="50"
+                        class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 range-slider"
+                      />
+                      <label for="price-range" class="block text-sm font-medium text-gray-900 dark:text-white font-medium">2.00</label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ============ second options -->
+                <div class="pt-5">
+                  <div class="flex justify-between items-center mb-3">
+                    <h4 class="text-[18px] font-medium">Step Size</h4>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <circle cx="9" cy="9" r="9" fill="#ADB5BD" />
+                        <rect x="7.5" y="6.99976" width="2.99999" height="7.99999" rx="1.5" fill="white" />
+                        <rect x="7.5" y="3" width="2.99999" height="2.99999" rx="1.5" fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- =================== select options =============== -->
+                  <div>
+                    <select name="H" id="H" class="border shadow-sm rounded-[8px] py-[10px] px-4 w-full">
+                      <option value="0.50">0.50</option>
+                      <option value="0.50">0.50</option>
+                      <option value="0.50">0.50</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- ============ second options -->
+                <div>
+                  <div class="flex justify-between items-center mb-3">
+                    <h4 class="text-[18px] font-medium">Basis Set</h4>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <circle cx="9" cy="9" r="9" fill="#ADB5BD" />
+                        <rect x="7.5" y="6.99976" width="2.99999" height="7.99999" rx="1.5" fill="white" />
+                        <rect x="7.5" y="3" width="2.99999" height="2.99999" rx="1.5" fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                  <!-- =================== select options =============== -->
+                  <div>
+                    <select name="H" id="H" class="border shadow-sm rounded-[8px] py-[10px] px-4 w-full">
+                      <option value="sto3g">sto3g</option>
+                      <option value="sto3g">sto3g</option>
+                      <option value="sto3g">sto3g</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="flex justify-between items-center">
+                  <button>Default</button>
+                  <button class="bg-primary py-3 px-6 text-white rounded-[100px]">Run</button>
                 </div>
               </div>
-            </div>
 
-            <!-- ============ second options -->
-            <div class="pt-5">
-              <div class="flex justify-between items-center mb-3">
-                <h4 class="text-[18px] font-medium">Step Size</h4>
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="9" fill="#ADB5BD" />
-                    <rect x="7.5" y="6.99976" width="2.99999" height="7.99999" rx="1.5" fill="white" />
-                    <rect x="7.5" y="3" width="2.99999" height="2.99999" rx="1.5" fill="white" />
-                  </svg>
-                </button>
-              </div>
-              <!-- =================== select options =============== -->
-              <div>
-                <select name="H" id="H" class="border shadow-sm rounded-[8px] py-[10px] px-4 w-full">
-                  <option value="0.50">0.50</option>
-                  <option value="0.50">0.50</option>
-                  <option value="0.50">0.50</option>
-                </select>
-              </div>
-            </div>
-            <!-- ============ second options -->
-            <div>
-              <div class="flex justify-between items-center mb-3">
-                <h4 class="text-[18px] font-medium">Basis Set</h4>
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="9" fill="#ADB5BD" />
-                    <rect x="7.5" y="6.99976" width="2.99999" height="7.99999" rx="1.5" fill="white" />
-                    <rect x="7.5" y="3" width="2.99999" height="2.99999" rx="1.5" fill="white" />
-                  </svg>
-                </button>
-              </div>
-              <!-- =================== select options =============== -->
-              <div>
-                <select name="H" id="H" class="border shadow-sm rounded-[8px] py-[10px] px-4 w-full">
-                  <option value="sto3g">sto3g</option>
-                  <option value="sto3g">sto3g</option>
-                  <option value="sto3g">sto3g</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="flex justify-between items-center">
-              <button>Default</button>
-              <button class="bg-primary py-3 px-6 text-white rounded-[100px]">Run</button>
-            </div>
-          </div>
-
-          <!-- graph column -->
-          <div class="lg:col-span-2 px-7 pt-8">
-            <div>
-              <div class="flex items-center justify-between px-5 pb-5 border-b">
-                <h2 class="text-[18px] font-semibold tracking-[0.4px] uppercase">H-H Dissociation Profile</h2>
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="9" fill="#ADB5BD" />
-                    <rect x="7.5" y="6.99976" width="2.99999" height="7.99999" rx="1.5" fill="white" />
-                    <rect x="7.5" y="3" width="2.99999" height="2.99999" rx="1.5" fill="white" />
-                  </svg>
-                </button>
-              </div>
-              <div class="mt-[167px]">
-                <p class="text-[18px] font-medium text-center leading-[36px]">
+              <!-- graph column -->
+              <div class="lg:col-span-2 px-7 pt-8">
+                <div>
+                  <div class="flex items-center justify-between px-5 pb-5 border-b">
+                    <h2 class="text-[18px] font-semibold tracking-[0.4px] uppercase">H-H Dissociation Profile</h2>
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <circle cx="9" cy="9" r="9" fill="#ADB5BD" />
+                        <rect x="7.5" y="6.99976" width="2.99999" height="7.99999" rx="1.5" fill="white" />
+                        <rect x="7.5" y="3" width="2.99999" height="2.99999" rx="1.5" fill="white" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="mt-[167px]">
+                    <!-- <p class="text-[18px] font-medium text-center leading-[36px]">
                   <i>
                     Choose the values and click run to see <br />
                     the according H-H Dissociation Profile.
                   </i>
-                </p>
+                </p> -->
+
+                    <canvas id="myChart"></canvas>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </section>
+          </section>
         </section>
+
+        <section id="codeBlocks" class="tab-content">
+          <!-- Content for the "Code Blocks" tab -->
+          <h3>Code Blocks Content</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus a tempore numquam provident suscipit iste porro facilis nihil expedita
+            dicta saepe tempora assumenda aliquam, mollitia quam temporibus perspiciatis quis debitis.
+          </p>
+        </section>
+
+        <!-- ========================= Molecule Selection & Graph section =============== -->
 
         <!-- =============================== table part started =============================== -->
         <section class="space-y-9">
@@ -425,6 +463,55 @@
           navMenu.classList.remove("block", "w-[70%]", "animate-slide-in");
         }
       });
+      <!-- =================================== Chart js functionality =========================== -->
+      // This is where you'll write JavaScript to create the chart.
+      // For example:
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: "bar", // Specify the type of chart (e.g., bar, line, pie, etc.)
+        data: {
+          labels: ["Label 1", "Label 2", "Label 3", "Label 4"], // X-axis labels
+          datasets: [
+            {
+              label: "Demo Chart",
+              data: [10, 20, 30, 50], // Data values
+              backgroundColor: "rgba(75, 192, 192, 0.2)", // Bar color
+              borderColor: "rgba(75, 192, 192, 1)", // Border color
+              borderWidth: 1, // Border width
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+      // =================================== tabs functionality =========================== -->
+      // Function to show/hide the tab content
+      function showTab(tabId) {
+        // Hide all tab content sections
+        const tabContents = document.getElementsByClassName("tab-content");
+        for (let i = 0; i < tabContents.length; i++) {
+          tabContents[i].style.display = "none";
+        }
+
+        // Show the selected tab content
+        const selectedTab = document.getElementById(tabId);
+        if (selectedTab) {
+          selectedTab.style.display = "block";
+        }
+
+        const activeButton = document.querySelector(`[onclick="showTab('${tabId}')"]`);
+        if (activeButton) {
+          activeButton.classList.add("active");
+        }
+      }
+
+      // Initially, show the default tab (e.g., "Calculations")
+      showTab("calculations");
     </script>
   </body>
 </html>
