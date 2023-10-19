@@ -19,13 +19,6 @@ body {
   margin: 0 auto;
 }
 
-@media (max-width: 767px) {
-  .container_fluid {
-    max-width: 100%;
-    padding: 0 10px;
-  }
-}
-
 h1,
 h2,
 h3,
@@ -66,4 +59,15 @@ input[type="range"].range-slider::-webkit-slider-thumb {
   width: 16px;
   border-radius: 50%;
   background-color: #3a74d1;
+}
+
+@media (max-width: 768px) {
+  .container_fluid {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  select {
+    background-position: right 13px;
+  }
 }

@@ -25,9 +25,9 @@
   <body>
     <header>
       <!-- header navbar -->
-      <nav class="container_fluid h-[76px] flex items-center justify-end">
+      <nav class="container_fluid h-[76px] hidden md:flex items-center justify-end">
         <div class="">
-          <ul class="flex items-center space-x-8">
+          <ul class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 space-x-0 md:space-x-8">
             <li>Home</li>
             <li>About</li>
             <li>Solutions</li>
@@ -71,7 +71,7 @@
 
           <!-- =========================== hero content =================== -->
 
-          <div class="content text-center w-[550px] mx-auto">
+          <div class="content text-center md:w-[550px] mx-auto mt-16">
             <h1 class="text-[32px] font-bold leading-tight text-center mb-4">Molecular Dissociation</h1>
             <p class="leading-[27px] text-[18px] text-[#343A40]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt sagittis eros. Quisque quis euismod lorem.
@@ -79,9 +79,9 @@
           </div>
         </div>
       </section>
-      <section class="pt-16 w-[960px] mx-auto">
+      <section class="pt-16 container_fluid lg:w-[960px] mx-auto">
         <!-- ========================= Tab section ==================== -->
-        <section class="flex justify-between items-center text-[18px] mb-9">
+        <section class="flex flex-wrap justify-between items-center text-[18px] mb-9">
           <button class="p-[6px]">Why Quantum</button>
           <button class="p-[6px]">Background</button>
           <button class="p-[6px] bg-[#F8FAFF] rounded-[8px] font-semibold text-[#1E437E]">Calculations</button>
@@ -90,7 +90,7 @@
 
         <!-- ========================= Molecule Selection & Graph section =============== -->
         <h3 class="uppercase text-[18px] font-bold mb-5">Molecule Selection</h3>
-        <section class="grid grid-cols-3 gap-[80px]">
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-[80px]">
           <div class="space-y-5">
             <!-- select options -->
             <div>
@@ -215,7 +215,7 @@
           </div>
 
           <!-- graph column -->
-          <div class="col-span-2 px-7 pt-8">
+          <div class="lg:col-span-2 px-7 pt-8">
             <div>
               <div class="flex items-center justify-between px-5 pb-5 border-b">
                 <h2 class="text-[18px] font-semibold tracking-[0.4px] uppercase">H-H Dissociation Profile</h2>
