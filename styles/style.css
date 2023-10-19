@@ -11,6 +11,7 @@ html {
 body {
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  position: relative;
 }
 
 .container_fluid {
@@ -59,6 +60,44 @@ input[type="range"].range-slider::-webkit-slider-thumb {
   width: 16px;
   border-radius: 50%;
   background-color: #3a74d1;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #000; /* Adjust color as needed */
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Menu styles */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 70%;
+  height: 100%;
+  background-color: #fff; /* Adjust background color as needed */
+  transition: 0.4s;
+  z-index: 1;
+  padding: 20px;
+}
+
+.menu > li {
+  list-style: none;
+  margin: 20px 0;
+  font-size: 18px; /* Adjust font size as needed */
+}
+
+table td {
+  padding: 12px 0;
 }
 
 @media (max-width: 768px) {
